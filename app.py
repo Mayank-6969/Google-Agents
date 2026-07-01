@@ -69,3 +69,5 @@ if user_message:
         st.markdown(ai_response)
         # append the AI response to message history
         st.session_state.messages.append({"role": "assistant", "content": ai_response})
+
+        
