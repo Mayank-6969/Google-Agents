@@ -1,14 +1,14 @@
 import requests
 
-
-user_message = "Can you tell me about black holes in 3-4 lines"
+user_message = "Tell me the conversion rate of INR to USD for 100000"
 
 request_message = {"message": user_message}
 
-url = "http://localhost:5678/webhook-test/3d4fdb4d-5f85-4694-ad8e-0ce573ed53ee"
+# Using the correct UUID (f0b8ff40-...) and the Production URL (/webhook/)
+url = "https://escalator-conducive-valuables.ngrok-free.dev/webhook/f0b8ff40-f872-4c8f-9a68-7564b6ac342c
 
 response = requests.post(url, json=request_message)
 
 print(response.status_code)
 
-print(response.json()[0]["output"])
+print(response.json())
